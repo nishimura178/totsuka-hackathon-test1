@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script src="jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+$("#login").click(function(){ //ログインボタンが押された時
+$.post( //サーバにデータ送信＆受信
+"login.php", //プログラムは login.php
+{
+"email": $("#email").val(), //email
+},
+function(data){ //送受信完了時の処理
+if(data.result == "Failure"){ //"Failure"受信時
+alert("登録されていないメールアドレスです");
+} else { //そうでは場合
+//userinfo.html に飛ぶ
+location.href = "userinfo.html";
+}
+}
+);
+});
+});
+</script>
+<title>ユーザ登録</title>
+</head>
+<body>
+<h1>ログイン</h1>
+<hr>
+メールアドレス：<input type="email" id="email" size="80" maxlength="40"><br>
+<input type="button" id="login" value="ログイン"><br></body>
+</html>

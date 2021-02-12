@@ -1,0 +1,16 @@
+/*タイトル背景色*/
+#title{
+   background-color: deepskyblue;
+}
+#sub_title{
+   background-color: skyblue;
+}
+/*タイトル結合*/
+.title{
+   margin: 0;
+   text-align: center;
+}
+/*メイン領域設定*/
+body{
+   background-color: beige;
+}

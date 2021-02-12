@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+   <title></title>
+   <meta>
+   <meta>
+   <link rel="stylesheet" href="bg.css">
+   <link rel="stylesheet" href="u_RL.css">
+   <script src="jquery-2.2.4.min.js"></script>
+   <script type="text/javascript">
+      $(function(){
+         $("#login").click(function(){ //ログインボタンが押された時
+         $.post( //サーバにデータ送信＆受信
+         "u_login.php", //プログラムは login.php
+         {
+            "email": $("#email").val(), //email
+         },
+         function(data){ //送受信完了時の処理
+         if(data.result == "Failure"){ //"Failure"受信時
+            alert("登録されていないメールアドレスです");
+         } else { //そうでは場合
+               //userinfo.html に飛ぶ
+               location.href = "userinfo.html";
+               }
+               }
+            );
+         });
+      });
+   </script>
+</head>
+<body id="main">
+   <div>
+      <h1 id="title" class="title">とつか避難所アプリ</h1>
+      <h1 id="sub_title" class="title">ログイン</h1>
+   </div>
+   <div id="form" align="center">
+      <form id="login" action="#" method="POST">
+         <table border="1">
+            <tr>
+               <th>ID</th>
+               <td><input type="text" name="id" autofocus required></td>
+            </tr>
+            <tr>
+               <th>パスワード</th>
+               <td><input type="password" name="pass" required></td>
+            </tr>
+            <tr>
+               <th>メールアドレス</th>
+               <td><input type="email" name="mail" id="email" required></td>
+            </tr>
+         </table>
+         <br>
+         <div>
+            <input type="submit" name="login" value="ログイン" id="login">
+            <input type="reset" name="clear" value="破棄">
+         </div>
+      </form>
+      <hr>
+      <a href="#">パスワードをお忘れですか？</a>
+      <br>
+      <a href="#">利用者登録を行いましたか？</a>
+   </div>
+</body>
+<footer></footer>
+</html>
