@@ -1,4 +1,4 @@
-/*タイトル背景色*/
+/*title color*/
 #title{
    background-color: deepskyblue;
 }
@@ -13,4 +13,10 @@
 /*メイン領域設定*/
 body{
    background-color: beige;
+}
+#m_back{
+   margin: 40px;
+   padding: 40px 80px;
+   border: 1px solid skyblue;
+   background-color: white;
 }
