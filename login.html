@@ -2,7 +2,12 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン</title>
+<link rel="stylesheet" href="/bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
 <script src="jquery-2.2.4.min.js"></script>
+<script src="/bootstrap-5.0.0-beta1-dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
 <script type="text/javascript">
 $(function(){
 $("#login").click(function(){ //ログインボタンが押された時
@@ -28,6 +33,15 @@ location.href = "userinfo.html";
 <body>
 <h1>ログイン</h1>
 <hr>
+<div class="contaier">
+	<table class="table">
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+	</table>
+</div>
 メールアドレス：<input type="email" id="email" size="80" maxlength="40"><br>
 <input type="button" id="login" value="ログイン"><br></body>
 </html>
