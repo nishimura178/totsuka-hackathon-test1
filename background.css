@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*title color*/
 #title{
    background-color: deepskyblue;
@@ -19,4 +20,27 @@ main{
    padding: 40px 80px;
    border: 1px solid skyblue;
    background-color: white;
+=======
+/*title color*/
+#title{
+   background-color: deepskyblue;
+}
+#sub_title{
+   background-color: skyblue;
+}
+/*タイトル結合*/
+.title{
+   margin: 0;
+   text-align: center;
+}
+/*メイン領域設定*/
+body{
+   background-color: beige;
+}
+main{
+   margin: 40px;
+   padding: 40px 80px;
+   border: 1px solid skyblue;
+   background-color: white;
+>>>>>>> 48fcf889baef4be41f0bdce55f9de2cb55f3b0e4
 }
