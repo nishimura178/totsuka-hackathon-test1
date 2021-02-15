@@ -14,7 +14,7 @@
 body{
    background-color: beige;
 }
-#m_back{
+main{
    margin: 40px;
    padding: 40px 80px;
    border: 1px solid skyblue;
