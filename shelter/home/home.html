@@ -28,7 +28,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 		-->
 
-		<title></title>
+		<title>ホーム</title>
 
 	</head>
 
@@ -36,10 +36,31 @@
 
 		<div>
 			<h1 id="title" class="title">とつか避難所アプリ</h1>
-			<h1 id="sub_title" class="title"></h1>
+			<h1 id="sub_title" class="title">ホーム</h1>
 	 	</div>
 
 		<main>
+			<form action="" method="POST" class="row g-3 needs-validation" novalidate>
+				<div class="mb-3" class="col-md-4">
+					<label for="validationCustom01" class="form-label"><strong>収容可能人数</strong></label>
+					<input type="number" class="form-control" id="validationCustom01" placeholder="例：1000" required>
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label"><strong>収容済み人数</strong></label>
+					<input type="number" class="form-control"id="exampleFormControlInput1" placeholder="例：500">
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label"><strong>収容予定人数</strong></label>
+					<input type="number" class="form-control"id="exampleFormControlInput1" placeholder="例：100">
+				</div>
+				<div>
+					<input type="submit" class="btn btn-primary">
+				</div>
+			</form>
+			<hr>
+			<input type="button" class="btn btn-link"><a href="#">物資状況を入力する</a>
+			<br>
+			<input type="button" class="btn btn-link"><a href="select.html">避難所を再選択する</a>
 		</main>
 
 	</body>
