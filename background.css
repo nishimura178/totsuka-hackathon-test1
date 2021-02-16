@@ -21,3 +21,9 @@ main{
    border: 1px solid skyblue;
    background-color: white;
 }
+
+/* map css */
+#map{
+   width: 50vw;
+   height: 50vw;
+}
