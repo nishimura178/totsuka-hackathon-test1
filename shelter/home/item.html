@@ -40,29 +40,27 @@
 	 	</div>
 
 		<main>
-			<form action="" method="POST" class="row g-3 needs-validation" novalidate>
-				<h1>混雑状況</h1>
-				<hr>
-				<div class="mb-3" class="col-md-4">
-					<label for="validationCustom01" class="form-label"><strong>収容可能人数</strong></label>
-					<input type="number" class="form-control" id="validationCustom01" placeholder="例：1000" required>
-				</div>
-				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label"><strong>収容済み人数</strong></label>
-					<input type="number" class="form-control"id="exampleFormControlInput1" placeholder="例：500">
-				</div>
-				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label"><strong>収容予定人数</strong></label>
-					<input type="number" class="form-control"id="exampleFormControlInput1" placeholder="例：100">
-				</div>
+			<h1>物資状況</h1>
+			<hr>
+			<form action="" method="POST">
+				<label for="exampleFormControlTextarea1" class="form-label"><strong>区分</strong></label>
+				<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+					<option selected>選択してください</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+				</select>
+				<label for="exampleFormControlTextarea1" class="form-label"><strong>品目</strong></label>
+				<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+					<option selected>選択してください</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+				</select>
 				<div>
 					<input type="submit" class="btn btn-primary">
 				</div>
 			</form>
-			<hr>
-			<input type="button" class="btn btn-link"><a href="#">物資状況を入力する</a>
-			<br>
-			<input type="button" class="btn btn-link"><a href="select.html">避難所を再選択する</a>
 		</main>
 
 	</body>

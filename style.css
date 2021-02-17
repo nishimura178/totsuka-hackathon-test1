@@ -1,3 +1,5 @@
+/* <共通スタイル> */
+
 /*タイトル背景色*/
 #title{
    background-color: deepskyblue;
@@ -22,8 +24,13 @@ main{
    background-color: white;
 }
 
-/* map css */
+/* </共通スタイル> */
+
+/* <user_style> */
+
 #map{
-   width: 75vw;
-   height: 75vw;
+   width: 100%;
+   height: 100%;
 }
+
+/* </user_style> */
