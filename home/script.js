@@ -1,3 +1,19 @@
+// visualize/hide password
+$('#pw-toggle').on('click',function(){
+
+  let state = $('#password').prop('checked');
+
+  if(!state){
+    $('#password').prop('checked',true);
+    $('#password').prop('type','text');
+  }
+  else{
+    $('#password').prop('checked',false);
+    $('#password').prop('type','password');
+  }
+
+})
+
 // user/login/regidter.html
 $('#register').on('click',function(){
 
@@ -27,3 +43,11 @@ $('#change').on('click',function(){
   }
   
 })
+
+function initMap() {
+  var opts = {
+    zoom: 15,
+    center: new google.maps.LatLng(35.1239654, 136.9417741)
+  };
+  var map = new google.maps.Map(document.getElementById("map"), opts);
+}

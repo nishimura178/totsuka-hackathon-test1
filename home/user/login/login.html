@@ -39,10 +39,17 @@
 				<div class="mb-3" class="col-md-4">
 					<label for="validationCustom01" class="form-label"><strong>メールアドレス</strong></label>
 					<input type="email" class="form-control" id="validationCustom01" placeholder="例：example@gmail.com" required>
+				</div>
 				<div class="mb-3">
 					<label for="exampleFormControlTextarea1" class="form-label"><strong>パスワード</strong></label>
-					<input type="password" class="form-control"id="exampleFormControlInput1" placeholder="ここにパスワードを入力">
+					<input type="password" class="form-control"id="password" placeholder="ここにパスワードを入力">
+					<br>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="pw-toggle">
+						<label class="form-check-label" for="flexSwitchCheckChecked">パスワードを表示する</label>
+					</div>
 				</div>
+				<br>
 				<div>
 					<!-- 後で消す -->
 					<a href="../home/home.html" class="btn btn-primary">ログイン</a>
@@ -55,5 +62,12 @@
 			<br>
 			<input type="button" class="btn btn-link"><a href="register.html">ユーザ登録をします</a>
 		</main>
+
+		<!-- jquery cdn -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- js org -->
+		<script src="../../script.js"></script>	
+
 	</body>
 </html>
