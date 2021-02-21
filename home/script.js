@@ -1,43 +1,29 @@
-$(document).ready(function(){
+// user/login/regidter.html
+$('#register').on('click',function(){
 
-  // user/login/regidter.html
-  $('#register').on('click',function(){
+  let ans = confirm('この内容で登録します。よろしいですか？');
 
-    let ans = confirm('この内容で登録します。よろしいですか？');
+  if (ans) {
+    location.href = 'login.html';  
+  }
+  else {
+    location.href = '#';
+  }
 
-    if (ans) {
-      location.href = 'login.html';  
-    }
-    
-    else {
-      location.href = '#';
-    };
+})
 
-  });
+// user/home/info.html
+$('#change').on('click',function(){
 
-  // user/home/info.html
-  $('#change').on('click',function(){
+  let state = $('.form-control').prop('disabled');
 
-    if($('input').prop('disabled')){
-
-      $('input').prop('disabled',false);
-    
-    }else{
-
-      let ans = confirm('この内容に変更します。よろしいですか？');
-
-      if(ans){
-
-        $('input').prop('disabled',true);
-
-      }else{
-
-        location.href = '#';
-
-      };
-
-    };
-
-  });
-
-});
+  if(state){
+    $('.form-control').prop('disabled',false);
+    $('#change').attr('value','保存');
+  }
+  else{
+    $('.form-control').prop('disabled',true);
+    $('#change').attr('value','変更');
+  }
+  
+})
