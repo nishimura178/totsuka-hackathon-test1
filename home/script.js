@@ -28,7 +28,7 @@ $('#register').on('click',function(){
 
 })
 
-// user/home/info.html
+// user/home/info.html chenge-botton
 $('#change').on('click',function(){
 
   let state = $('.form-control').prop('disabled');
@@ -39,7 +39,9 @@ $('#change').on('click',function(){
     $('#change').attr('value','保存');
   }
   else{
+    $('#password').prop('type','password');
     $('.form-control').prop('disabled',true);
+    $('#pw-toggle').prop('checked',false);
     $('#pw-toggle').prop('disabled',true);
     $('#change').attr('value','変更');
   }
