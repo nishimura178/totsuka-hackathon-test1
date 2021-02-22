@@ -35,10 +35,12 @@ $('#change').on('click',function(){
 
   if(state){
     $('.form-control').prop('disabled',false);
+    $('#pw-toggle').prop('disabled',false);
     $('#change').attr('value','保存');
   }
   else{
     $('.form-control').prop('disabled',true);
+    $('#pw-toggle').prop('disabled',true);
     $('#change').attr('value','変更');
   }
   

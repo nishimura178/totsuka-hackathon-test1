@@ -18,8 +18,7 @@ body{
 	background-color: beige;
 }
 main{
-	margin: 40px;
-	padding: 40px 80px;
+	margin: 50px;
 	border: 1px solid skyblue;
 	background-color: white;
 }
@@ -41,5 +40,12 @@ main{
 /* </user_style> */
 
 /* <user-home-home.html> */
+
+#map{
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* </user-home-home.html> */
