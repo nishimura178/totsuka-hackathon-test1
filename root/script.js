@@ -1,4 +1,4 @@
-// visualize/hide password
+// Show or hide password
 $('#pw-toggle').on('click',function(){
 
   let state = $('#password').prop('checked');
@@ -14,7 +14,7 @@ $('#pw-toggle').on('click',function(){
 
 })
 
-// user/login/regidter.html
+// Foolproof on user registration page
 $('#register').on('click',function(){
 
   let ans = confirm('この内容で登録します。よろしいですか？');
@@ -28,7 +28,7 @@ $('#register').on('click',function(){
 
 })
 
-// user/home/info.html chenge-botton
+// Change and save password after login
 $('#change').on('click',function(){
 
   let state = $('.form-control').prop('disabled');
@@ -45,13 +45,15 @@ $('#change').on('click',function(){
     $('#pw-toggle').prop('disabled',true);
     $('#change').attr('value','変更');
   }
+
+  
   
 })
-
+// Generate google map
 function initMap() {
   var opts = {
     zoom: 15,
-    center: new google.maps.LatLng(35.1239654, 136.9417741)
+    center: new google.maps.LatLng(35.378647, 139.529183)
   };
   var map = new google.maps.Map(document.getElementById("map"), opts);
 }
