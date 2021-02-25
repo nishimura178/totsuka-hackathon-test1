@@ -38,23 +38,36 @@
 			<form action="" method="POST" class="row g-3 needs-validation" novalidate>
 				<div class="mb-3" class="col-md-4">
 					<label for="validationCustom01" class="form-label"><strong>メールアドレス</strong></label>
-					<input type="email" value="aaa@gmail.com" class="form-control" id="validationCustom01" placeholder="例：example@gmail.com" required>
+					<input type="email" class="form-control" id="validationCustom01" placeholder="例：example@gmail.com" required>
 				</div>
 				<div class="mb-3">
 					<label for="exampleFormControlTextarea1" class="form-label"><strong>パスワード</strong></label>
-					<input type="password" value="aaaa" class="form-control"id="password" placeholder="ここにパスワードを入力">
+					<input type="password" class="form-control"id="password" placeholder="ここにパスワードを入力">
 					<br>
 					<div class="form-check form-switch">
 						<input class="form-check-input" type="checkbox" id="pw-toggle">
 						<label class="form-check-label" for="flexSwitchCheckChecked">パスワードを表示する</label>
 					</div>
 				</div>
+				<label for="validationCustom04" class="form-label">State</label>
+				<select class="form-select" id="validationCustom04" required>
+					<option selected disabled value="">Choose...</option>
+					<option>...</option>
+				</select>
+				<div class="invalid-feedback">
+					Please select a valid state.
+				</div>
+			</div>
+			<div class="col-md-3">
+				<label for="validationCustom05" class="form-label">Zip</label>
+				<input type="text" class="form-control" id="validationCustom05" required>
+				<div class="invalid-feedback">
+					Please provide a valid zip.
+				</div>
+			</div>		
 				<br>
 				<div>
-					<!-- 後で消す -->
-					<a href="../home/home.html" class="btn btn-primary">ログイン</a>
-					<!-- 後で有効化する -->
-					<!-- <input type="submit" value="ログイン" class="btn btn-primary"> -->
+					<input type="submit" value="ログイン" class="btn btn-primary">
 				</div>
 			</form>
 			<hr>

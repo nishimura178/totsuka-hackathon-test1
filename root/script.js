@@ -39,15 +39,22 @@ $('#change').on('click',function(){
     $('#change').attr('value','保存');
   }
   else{
-    $('#password').prop('type','password');
-    $('.form-control').prop('disabled',true);
-    $('#pw-toggle').prop('checked',false);
-    $('#pw-toggle').prop('disabled',true);
-    $('#change').attr('value','変更');
+
+    let ans = confirm('この内容に変更します。よろしいですか？');
+
+    if(ans){
+      $('#password').prop('type','password');
+      $('.form-control').prop('disabled',true);
+      $('#pw-toggle').prop('checked',false);
+      $('#pw-toggle').prop('disabled',true);
+      $('#change').attr('value','変更');
+    }
+    else{
+      location.href = '#';
+    }
+    
   }
 
-  
-  
 })
 // Generate google map
 function initMap() {
@@ -57,3 +64,25 @@ function initMap() {
   };
   var map = new google.maps.Map(document.getElementById("map"), opts);
 }
+
+// Validation
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
