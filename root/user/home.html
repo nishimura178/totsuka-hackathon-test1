@@ -7,10 +7,10 @@
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-		<!-- background temp css -->
-		<link rel="stylesheet" href="../../style.css">
+		<!-- css org -->
+		<link rel="stylesheet" href="style.css">
 
-		<title></title>
+		<title>ホーム</title>
 	</head>
 
 	<body>
@@ -28,20 +28,17 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="home.html">Home</a>
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="info.html">ユーザ情報</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="shelter.html".html">所属する避難所</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="care.html">サポートチーム一覧</a>
+							<a class="nav-link" href="belong.html".html">belong</a>
 						</li>
 				</div>
 			</div>
-		</nav>
+		</nav> 
 
 		<!-- Optional JavaScript; choose one of the two! -->
 
@@ -54,31 +51,20 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 		-->
 
-		<main>
-			
-			<h1>所属する避難所</h1>
-			<hr>
-			<table class="table">
-				<tr>
-					<th scope="row">名前</th>
-					<td>生麦小学校</td>
-				</tr>
-				<tr>
-					<th scope="row">住所</th>
-					<td>生麦四丁目15番1号</td>
-				</tr>
-				<tr>
-					<th scope="row">備考</th>
-					<td>被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。</td>
-				</tr>
-			</table>
-		</main>
+		<div>
+
+			<div id="map"></div>
+			 
+		</div>
+
+		<!-- google maps javascript api -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF-ljsjLfdgTfR7M4bpeyT00PV0uzOq2k&callback=initMap"></script>
 
 		<!-- jquery cdn -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 		<!-- js org -->
-		<script src="../../script.js"></script>
+		<script src="script.js"></script>	
 
 	</body>
 </html>
