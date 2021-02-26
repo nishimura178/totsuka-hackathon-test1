@@ -8,7 +8,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 		<!-- background temp css -->
-		<link rel="stylesheet" href="../../style.css">
+		<link rel="stylesheet" href="../style.css">
 
 		<title></title>
 	</head>
@@ -16,10 +16,10 @@
 	<body>
 		<div>
 			<h1 id="title" class="title">とつか避難所アプリ</h1>
-			<h1 id="sub_title" class="title">ホーム</h1>
+			<h1 id="sub_title" class="title">サポートチーム</h1>
 	 	</div>
 		
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,13 +31,16 @@
 							<a class="nav-link active" aria-current="page" href="home.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="info.html">ユーザ情報</a>
+							<a class="nav-link" href="info.html">info</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="shelter.html".html">所属する避難所</a>
+							<a class="nav-link" href="join.html".html">join</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="care.html">サポートチーム一覧</a>
+							<a class="nav-link" href="register.html">register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="users.html".html">users</a>
 						</li>
 				</div>
 			</div>
@@ -56,35 +59,30 @@
 
 		<main>
 			
-			<h1>サポートチーム一覧</h1>
-			<hr>
-
 			<table class="table">
-				<thead>
 					<tr>
-						<th scope="col">氏名</th>
-						<th scope="col">役割</th>
-						<th scope="col">備考</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Mark</td>
-						<td>Otto</td>
-						<td>@mdo</td>
-					</tr>
-					<tr>
-						<td>Jacob</td>
-						<td>Thornton</td>
-						<td>@fat</td>
-					</tr>
-					<tr>
-						<td>Larry the Bird</td>
+						<th scope="row">ID</th>
 						<td></td>
-						<td>@twitter</td>
 					</tr>
-				</tbody>
+					<tr>
+						<th scope="row">作成日時</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">更新日時</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">サポートチーム名</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">詳細情報</th>
+						<td></td>
+					</tr>
+				<hr>
 			</table>
+			<a href="#" class="btn btn-link">このサポートチームに参加する</a>
 
 		</main>
 
@@ -92,7 +90,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 		<!-- js org -->
-		<script src="../../script.js"></script>
+		<script src="../script.js"></script>
 
 	</body>
 </html>

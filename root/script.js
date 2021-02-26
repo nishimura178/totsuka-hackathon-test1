@@ -86,3 +86,20 @@ function initMap() {
       }, false)
     })
 })()
+
+// Use of open data sources
+// List of regional disaster prevention bases in Yokohama
+
+// support-team
+// users.html
+// Sorting
+window.onload(
+
+  function (){
+
+    // Get all sort keys at once
+    let val = document.getElementsByClassName('Skeys');
+
+  }  
+
+)
