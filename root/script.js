@@ -56,14 +56,6 @@ $('#change').on('click',function(){
   }
 
 })
-// Generate google map
-function initMap() {
-  var opts = {
-    zoom: 15,
-    center: new google.maps.LatLng(35.378647, 139.529183)
-  };
-  var map = new google.maps.Map(document.getElementById("map"), opts);
-}
 
 // Validation
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -90,8 +82,57 @@ function initMap() {
 // Use of open data sources
 // List of regional disaster prevention bases in Yokohama
 
-// support-team
-// users.html
+// <shelter>
+  // <home>
+    // <Shelter map object+α generation>
+      function initMap() {
+
+        var opts = {
+          zoom: 15,
+          center: new google.maps.LatLng(35.378647, 139.529183)
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"), opts);
+
+        // let markers = new google.maps.Marker({
+        //   map: map,
+        //   position: new google.maps.LatLng(35.378647, 139.529183)
+        // });
+
+        // let infobox = document.createElement('div');
+
+        // infobox.innerHTML = 
+        //   '<div class="infobox">'+
+        //     '<div class="inner">'+
+        //       '<div class="header"><h3>生麦小学校</h3></div>'+
+        //       '<div class="container">生麦四丁目15番1号</div>'+
+        //       '<div class="footer"><button>Detail</button></div>'+
+        //     '</div>'+
+        //   '</div>'  
+        // ;
+
+        // let infoboxOp = {
+        //   content: infobox,  //表示するHTML
+        //   disableAutoPan: false,
+        //   dixelOffset: new google.maps.Size(-150, -48), // オフセット値
+        //   zIndex: null,
+        //   alignBottom: true,
+        //   boxClass: "infobox",
+        //   enableEventPropagation: true,
+        //   closeBoxMargin: "0px 0px -30px 0px",
+        //   infoBoxClearance: new google.maps.Size(1, 1)
+        // };
+
+        // let infobox = new infobox(infoboxOp);
+
+        // infobox.open(map,this);
+
+      };
+    // </Shelter map object+α generation>
+  // </home>
+// </shelter>
+
+// support-team/users
 // Sorting
 window.onload(
 
@@ -100,6 +141,6 @@ window.onload(
     // Get all sort keys at once
     let val = document.getElementsByClassName('Skeys');
 
-  }  
+  }
 
 )
