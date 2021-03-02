@@ -48,10 +48,10 @@
 							<a class="nav-link active" aria-current="page" href="home.html">home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="info.html">info</a>
+							<a class="nav-link" href="#">info</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#".html">join</a>
+							<a class="nav-link" href="join.html".html">join</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="select.html">select</a>
@@ -62,24 +62,38 @@
 
 		<main>
 
-			<form action="#" method="POST" class="row g-3 needs-validation" novalidate>
+			<form action="" method="POST" class="row g-3 needs-validation" novalidate>
 				<div class="mb-3" class="col-md-4">
-					<label for="validationCustom01" class="form-label"><strong>利用者パスワード</strong></label>
-					<input type="text" name="user_password" class="form-control" id="validationCustom01" placeholder="ここにパスワードを入力" required>
+					<label for="validationCustom01" class="form-label"><strong>避難所名</strong></label>
+					<input type="text" name="name" class="form-control" id="validationCustom01" placeholder="例：example@gmail.com" required>
 				</div>
-				<div>
-					<input type="submit" value="利用者登録" class="btn btn-primary">
+				<div class="mb-3" class="col-md-4">
+					<label for="validationCustom01" class="form-label"><strong>詳細情報</strong></label>
+					<textarea name="info" class="form-control"></textarea>
 				</div>
-			</form>
-			<hr>
-			<form action="#">
 				<div class="mb-3">
 					<label for="exampleFormControlTextarea1" class="form-label"><strong>スタッフパスワード</strong></label>
-					<input type="text" name="staff_password" class="form-control"id="text" placeholder="ここにパスワードを入力">
+					<input type="password" class="form-control"id="password" placeholder="ここにパスワードを入力">
+					<br>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="pw-toggle">
+						<label class="form-check-label" for="flexSwitchCheckChecked">パスワードを表示する</label>
+					</div>
 				</div>
-				<input type="submit" value="スタッフ登録" class="btn btn-primary">
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label"><strong>利用者パスワード</strong></label>
+					<input type="password" class="form-control"id="password" placeholder="ここにパスワードを入力">
+					<br>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="pw-toggle">
+						<label class="form-check-label" for="flexSwitchCheckChecked">パスワードを表示する</label>
+					</div>
+				</div>
+				<br>
+				<div>
+					<input type="submit" value="登録" class="btn btn-primary">
+				</div>
 			</form>
-
 		</main>
 
 		<!-- js org -->
