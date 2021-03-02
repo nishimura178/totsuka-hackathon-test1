@@ -16,7 +16,7 @@
 	<body>
 		<div>
 			<h1 id="title" class="title">とつか避難所アプリ</h1>
-			<h1 id="sub_title" class="title">ホーム</h1>
+			<h1 id="sub_title" class="title">support-team</h1>
 	 	</div>
 		
 		 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,6 +42,9 @@
 						<li class="nav-item">
 							<a class="nav-link" href="users.html".html">users</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="search.html">search</a>
+						</li>
 				</div>
 			</div>
 		</nav>
@@ -58,7 +61,23 @@
 		-->
 
 		<main>
-
+			<form action="#" method="POST" class="row g-3 needs-validation" novalidate>
+				<div class="mb-3" class="col-md-4">
+					<label for="validationCustom01" class="form-label"><strong>利用者パスワード</strong></label>
+					<input type="text" name="user_password" class="form-control" id="validationCustom01" placeholder="ここにパスワードを入力" required>
+				</div>
+				<div>
+					<input type="submit" value="利用者登録" class="btn btn-primary">
+				</div>
+			</form>
+			<hr>
+			<form action="#">
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label"><strong>スタッフパスワード</strong></label>
+					<input type="text" name="staff_password" class="form-control"id="text" placeholder="ここにパスワードを入力">
+				</div>
+				<input type="submit" value="スタッフ登録" class="btn btn-primary">
+			</form>
 		</main>
 
 		<!-- jquery cdn -->

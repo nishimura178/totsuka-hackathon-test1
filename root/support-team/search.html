@@ -45,7 +45,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">home</a>
+							<a class="nav-link active" aria-current="page" href="home.html">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="info.html">info</a>
@@ -54,40 +54,35 @@
 							<a class="nav-link" href="join.html".html">join</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="search.html">select</a>
+							<a class="nav-link" href="register.html">register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="users.html".html">users</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="search.html">search</a>
 						</li>
 				</div>
 			</div>
 		</nav>
 
 		<main>
+			<h1>検索</h1>
+			<hr>
 			<form action="#" method="POST" class="row g-3 needs-validation" novalidate>
-				<h1>混雑状況</h1>
-				<hr>
 				<div class="mb-3" class="col-md-4">
-					<label for="validationCustom01" class="form-label"><strong>避難可能人数</strong></label>
-					<input type="number" class="form-control" id="validationCustom01" placeholder="例：1000" required>
+					<label for="validationCustom01" class="form-label"><strong>サポートチームID</strong></label>
+					<input type="text" class="form-control" id="validationCustom01" required>
 				</div>
-				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label"><strong>避難済み人数</strong></label>
-					<input type="number" class="form-control"id="exampleFormControlInput1" placeholder="例：500">
-				</div>
-				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label"><strong>待ち人数</strong></label>
-					<input type="number" class="form-control"id="exampleFormControlInput1" placeholder="例：100">
-				</div>
+				<br>
 				<div>
-					<input type="submit" class="btn btn-primary">
+					<input type="submit" value="避難所情報へ" class="btn btn-primary">
 				</div>
 			</form>
-			<hr>
-			<input type="button" class="btn btn-link"><a href="../home/item.html">物資状況を入力する</a>
-			<br>
-			<input type="button" class="btn btn-link"><a href="select.html">避難所を再選択する</a>
 		</main>
 
 		<!-- js org -->
-		<script src="../script.js"></script>		
+		<script src="../script.js"></script>
 
 	</body>
 </html>
