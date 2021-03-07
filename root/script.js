@@ -88,29 +88,48 @@ $('#change').on('click',function(){
 
       function initMap() {
 
-        let letlng = new google.maps.LatLng(35.495675, 139.67078);
+        // <Generate map>
+          let letlng = new google.maps.LatLng(35.495675, 139.67078);
 
-        var opts = {
-          zoom: 16,
-          center: letlng
-        };
+          var opts = {
+            zoom: 16,
+            center: letlng
+          };
 
-        var map = new google.maps.Map(document.getElementById("map"), opts);
+          var map = new google.maps.Map(document.getElementById("map"), opts);
+        // </Generate map>
 
-        let marker = new google.maps.Marker({
-          position: letlng,
-          map: map
-        });
+        // <Generate marker>
+          let marker = new google.maps.Marker({
+            position: letlng,
+            map: map
+          });
+        // </Generate marker>
 
-        let infowindow = new google.maps.InfoWindow({
-          content: 
-          '<h3>生麦小学校</h3>'+
-          '<p>生麦小学校</p>',
-          position: letlng
-        });
+        // <Generate infowindow when clicking marker>
+          let infowindow = new google.maps.InfoWindow({
+            position: letlng,
+            content:
+            '<table class="table">'+
+              '<tr>'+
+                '<th scope="row">名前</th>'+
+                '<td>生麦小学校</td>'+
+              '</tr>'+
+              '<tr>'+
+                '<th scope="row">住所</th>'+
+                '<td>生麦四丁目15番1号</td>'+
+              '</tr>'+
+            '</table>'+
+            '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>'
+          });
 
-        infowindow.open(map);
+          google.maps.event.addListener(marker,'click',function(){
 
+            infowindow.open(map);
+  
+          });
+        // </Generate infowindow when clicking marker>
+        
       };
 
     // </Generate map>
