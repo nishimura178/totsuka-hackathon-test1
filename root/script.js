@@ -11,7 +11,7 @@ $('#pw-toggle').on('click',function(){
     $('#password').prop('checked',false);
     $('#password').prop('type','password');
   }
-
+  
 })
 
 // Foolproof on user registration page
@@ -83,62 +83,41 @@ $('#change').on('click',function(){
 // List of regional disaster prevention bases in Yokohama
 
 // <shelter>
-  // <home>
-    // <Shelter map object+α generation>
+  // <home.html>
+    // <Generate map>
+
       function initMap() {
 
-        var opts = {
-          zoom: 15,
-          center: new google.maps.LatLng(35.378647, 139.529183)
-        };
+        let letlng = new google.maps.LatLng(35.495675, 139.67078);
 
-        // Markerを生成
-        var marker = new google.maps.Marker({
-          map: map,
-          position: new google.maps.LatLng(35.3726655, 139.5321246)
-        });
+        var opts = {
+          zoom: 16,
+          center: letlng
+        };
 
         var map = new google.maps.Map(document.getElementById("map"), opts);
 
+        let marker = new google.maps.Marker({
+          position: letlng,
+          map: map
+        });
+
+        let infowindow = new google.maps.InfoWindow({
+          content: 
+          '<h3>生麦小学校</h3>'+
+          '<p>生麦小学校</p>',
+          position: letlng
+        });
+
+        infowindow.open(map);
+
       };
 
-      // Marker をクリックした時のイベントを定義
-      google.maps.event.addListener(marker, 'click', function() {
-
-      // infobox 用の div エレメントを生成
-        var infoboxContent = document.createElement('div');
-
-        // infobox に表示するHTML
-        infoboxContent.innerHTML = 
-          '<div class="infobox">'+
-            '<div class="inner">'+
-              '<div class="header"><h3>マルティスープ株式会社</h3></div>'+
-              '<div class="container">東京都千代田区神田錦町3-11<br/>03-3518-9013</div>'+
-              '<div class="footer"><button>Detail</button></div>'+
-            '</div>'+
-          '</div>'
-        ;        
-
-        // infobox のオプション
-        var infoboxOptions = {
-          content: infoboxContent,  //表示するHTML
-          disableAutoPan: false,
-          dixelOffset: new google.maps.Size(-150, -48), // オフセット値
-          zIndex: null,
-          alignBottom: true,
-          boxClass: "infobox",
-          enableEventPropagation: true,
-          closeBoxMargin: "0px 0px -30px 0px",
-          // closeBoxURL: "close.png", // 閉じるボタンのイメージ
-          infoBoxClearance: new google.maps.Size(1, 1)
-        };
-        // infobox を生成して表示
-        var infobox = new InfoBox(infoboxOptions);
-        infobox.open(map, this);
-      });
-
-    // </Shelter map object+α generation>
-  // </home>
+    // </Generate map>
+  // </home.html>
+  // <info.html>
+      
+  // </info.html>
 // </shelter>
 
 // support-team/users
