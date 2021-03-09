@@ -85,7 +85,6 @@ $('#change').on('click',function(){
 // <shelter>
   // <home.html>
     // <Generate map>
-
       function initMap() {
 
         // <Generate map>
@@ -131,12 +130,8 @@ $('#change').on('click',function(){
         // </Generate infowindow when clicking marker>
         
       };
-
     // </Generate map>
   // </home.html>
-  // <info.html>
-      
-  // </info.html>
 // </shelter>
 
 // support-team/users
