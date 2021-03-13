@@ -87,6 +87,8 @@ $('#change').on('click',function(){
     // <Generate map>
       function initMap() {
 
+        let data = window.mapData;
+
         // <Generate map>
           let letlng = new google.maps.LatLng(35.495675, 139.67078);
 
@@ -100,14 +102,14 @@ $('#change').on('click',function(){
 
         // <Generate marker>
           let marker = new google.maps.Marker({
-            position: letlng,
+            position: data[0]["shelter"][0],
             map: map
           });
         // </Generate marker>
 
         // <Generate infowindow when clicking marker>
           let infowindow = new google.maps.InfoWindow({
-            position: letlng,
+            position: data[0]["shelter"][0],
             content:
             '<table class="table">'+
               '<tr>'+
@@ -117,9 +119,6 @@ $('#change').on('click',function(){
               '<tr>'+
                 '<th scope="row">住所</th>'+
                 '<td>生麦四丁目15番1号</td>'+
-              '</tr>'+
-                '<th scope="row">備考</th>'+
-                '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
               '</tr>'+
             '</table>'+
             '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>'
