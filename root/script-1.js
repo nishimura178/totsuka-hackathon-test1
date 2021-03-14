@@ -87,7 +87,7 @@ $('#change').on('click',function(){
     // <Generate map>
       function initMap() {
 
-        let data = window.mapData;
+        let data = "../data/map-json.js";
 
         // <Generate map>
           let letlng = new google.maps.LatLng(35.495675, 139.67078);
@@ -100,16 +100,18 @@ $('#change').on('click',function(){
           var map = new google.maps.Map(document.getElementById("map"), opts);
         // </Generate map>
 
+        let letlng = new google.maps.LatLng(data[0]["shelter"][0]);
+
         // <Generate marker>
           let marker = new google.maps.Marker({
-            position: data[0]["shelter"][0],
+            position: letlng,
             map: map
           });
         // </Generate marker>
 
         // <Generate infowindow when clicking marker>
           let infowindow = new google.maps.InfoWindow({
-            position: data[0]["shelter"][0],
+            position: letlng,
             content:
             '<table class="table">'+
               '<tr>'+
