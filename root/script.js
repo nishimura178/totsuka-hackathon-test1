@@ -127,10 +127,22 @@ $('#change').on('click',function(){
 
           google.maps.event.addListener(marker,'click',function(){
 
-            infowindow.open(map);
+            infowindow.open(map, marker);
   
           });
         // </Generate infowindow when clicking marker>
+
+        // Generate marker on click
+
+        // Route guidance
+        const directionsRenderer = new google.maps.DirectionsRenderer();
+
+        const directionsService = new google.maps.DirectionsService();
+
+        directionsRenderer.setMap(map);
+
+        directionsRenderer.setPanel(document.getElementById("nav-panel"));
+        
         
       };
     // </Generate map>
