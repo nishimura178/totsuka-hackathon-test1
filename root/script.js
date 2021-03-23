@@ -85,64 +85,127 @@ $('#change').on('click',function(){
 // <user>
   // <home.html>
     // <Generate map>
+
       function initMap() {
 
-        // <Generate map>
-          let letlng = new google.maps.LatLng(35.495675, 139.67078);
-
-          var opts = {
-            zoom: 16,
-            center: letlng
-          };
-
-          var map = new google.maps.Map(document.getElementById("map"), opts);
-        // </Generate map>
-
-        // <Generate marker>
-          let marker = new google.maps.Marker({
-            position: letlng,
-            map: map
-          });
-        // </Generate marker>
-
-        // <Generate infowindow when clicking marker>
-          let infowindow = new google.maps.InfoWindow({
-            position: letlng,
+        let markerData = 
+        [
+          {
+            lat: 35.495675,
+            lng: 139.67078,
             content:
             '<table class="table">'+
-              '<tr>'+
-                '<th scope="row">名前</th>'+
-                '<td>生麦小学校</td>'+
-              '</tr>'+
-              '<tr>'+
-                '<th scope="row">住所</th>'+
-                '<td>生麦四丁目15番1号</td>'+
-              '</tr>'+
-                '<th scope="row">備考</th>'+
-                '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
-              '</tr>'+
-            '</table>'+
-            '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>'
+            '<tr>'+
+              '<th scope="row">混雑度</th>'+
+              '<td><h1>0%</h1></td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">名前</th>'+
+              '<td>生麦小学校</td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">住所</th>'+
+              '<td>生麦四丁目15番1号</td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">備考</th>'+
+              '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
+            '</tr>'+
+          '</table>'+
+          '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>'
+          },
+          {
+            lat: 35.4961022924626,
+            lng: 139.6695676445758,
+            content:
+            '<div class="card">'+
+              '<img src="app-home-ex0.jpg" class="card-img-top" alt="No image">'+
+              '<div class="card-body">'+
+                '<h5 class="card-title">Card title</h5>'+
+                '<p class="card-text">'+
+                  'Some quick example text to build on the card title and make up the bulk of the card`s content.'+
+                '</p>'+
+              '</div>'+
+            '</div>'
+          },
+          {
+            lat: 35.4953,
+            lng: 139.66695,
+            content:
+            '<table class="table">'+
+            '<tr>'+
+              '<th scope="row">混雑度</th>'+
+              '<td>0%</td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">名前</th>'+
+              '<td>生麦小学校</td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">住所</th>'+
+              '<td>生麦四丁目15番1号</td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">備考</th>'+
+              '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
+            '</tr>'+
+          '</table>'+
+          '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>'
+          }
+        ];
+
+        let latlng = new google.maps.LatLng({
+          lat: markerData[0]['lat'],
+          lng: markerData[0]['lng']
+        });
+
+        var opts = {
+          zoom: 16,
+          center: latlng
+        };
+
+        // <Generate map>
+        let map = new google.maps.Map(document.getElementById("map"), opts);
+
+        // <Generate marker>
+        for(var i=0; i<markerData.length; i++){
+
+          let latlng = new google.maps.LatLng({
+            lat: markerData[i]['lat'],
+            lng: markerData[i]['lng']
           });
-
-          google.maps.event.addListener(marker,'click',function(){
-
-            infowindow.open(map, marker);
   
+          var marker = new google.maps.Marker({
+            position: latlng,
+            map: map
           });
-        // </Generate infowindow when clicking marker>
+
+        };
+
+        // Generate infowindow when clicking marker
+        var infowindow = new google.maps.InfoWindow({
+          position: {
+            lat: markerData[1]['lat'],
+            lng: markerData[1]['lng']
+          },
+          content: markerData[1]['content']
+        });
+
+        var marker = new google.maps.Marker({
+          position: {
+            lat: markerData[1]['lat'],
+            lng: markerData[1]['lng']
+          },
+          map: map
+        });
+
+        google.maps.event.addListener(marker,'click',function(){
+          infowindow.open(map, marker);
+        });  
 
         // Generate marker on click
 
-        // Route guidance
-        const directionsRenderer = new google.maps.DirectionsRenderer();
-
-        const directionsService = new google.maps.DirectionsService();
-
-        directionsRenderer.setMap(map);
-
-        directionsRenderer.setPanel(document.getElementById("nav-panel"));
-        
+        // Route guidance        
         
       };
     // </Generate map>
@@ -151,13 +214,3 @@ $('#change').on('click',function(){
 
 // support-team/users
 // Sorting
-window.onload(
-
-  function (){
-
-    // Get all sort keys at once
-    let val = document.getElementsByClassName('Skeys');
-
-  }
-
-)
