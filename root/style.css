@@ -13,6 +13,10 @@
 	margin: 0;
 	text-align: center;
 }
+/* メニューバー */
+.navbar-brand{
+	text-align: center;
+}
 /*全体背景色*/
 body{
 	background-color: beige;
@@ -53,4 +57,14 @@ main{
 
 .navbar navbar-expand-lg navbar-light bg-light{
 	position: relative;
+}
+
+.accordion .accordion-item .accordion-header .accordion-button{
+	position: relative;
+}
+
+/* infowindow */
+.img-fluid{
+	max-width: 100%;
+	height: auto;
 }

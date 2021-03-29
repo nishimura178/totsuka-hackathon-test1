@@ -95,62 +95,68 @@ $('#change').on('click',function(){
             lng: 139.67078,
             content:
             '<table class="table">'+
-            '<tr>'+
-              '<th scope="row">混雑度</th>'+
-              '<td><h1>0%</h1></td>'+
-            '</tr>'+
-            '<tr>'+
-              '<th scope="row">名前</th>'+
-              '<td>生麦小学校</td>'+
-            '</tr>'+
-            '<tr>'+
-              '<th scope="row">住所</th>'+
-              '<td>生麦四丁目15番1号</td>'+
-            '</tr>'+
-            '<tr>'+
-              '<th scope="row">備考</th>'+
-              '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
-            '</tr>'+
-          '</table>'+
-          '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>'
+              '<tr>'+
+                '<th scope="row">混雑度</th>'+
+                '<td>'+
+                  '<div class="progress">'+
+                    '<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>'+
+                  '</div>'+
+                '</td>'+
+              '</tr>'+
+              '<tr>'+
+                '<th scope="row">名前</th>'+
+                '<td>生麦小学校</td>'+
+              '</tr>'+
+              '<tr>'+
+                '<th scope="row">住所</th>'+
+                '<td>生麦四丁目15番1号</td>'+
+              '</tr>'+
+              '<tr>'+
+                '<th scope="row">備考</th>'+
+                '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
+              '</tr>'+
+            '</table>'+
+            '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>',
+            icon: ''
           },
           {
             lat: 35.4961022924626,
             lng: 139.6695676445758,
             content:
-            '<div class="card">'+
-              '<img src="app-home-ex0.jpg" class="card-img-top" alt="No image">'+
-              '<div class="card-body">'+
-                '<h5 class="card-title">Card title</h5>'+
-                '<p class="card-text">'+
-                  'Some quick example text to build on the card title and make up the bulk of the card`s content.'+
-                '</p>'+
-              '</div>'+
-            '</div>'
+              '<div class="card" class="img-fluid">'+
+                '<img src="../data/blueBack.jpg" class="card-img-top" alt="no image">'+
+                '<div class="card-body">'+
+                  '<h5 class="card-title">タイトル</h5>'+
+                  '<p class="card-text">投稿者コメント</p>'+
+                '</div>'+
+              '</div>'
+            ,
+            icon: 'data/skull.png'
           },
           {
             lat: 35.4953,
             lng: 139.66695,
             content:
             '<table class="table">'+
-            '<tr>'+
-              '<th scope="row">混雑度</th>'+
-              '<td>0%</td>'+
-            '</tr>'+
-            '<tr>'+
-              '<th scope="row">名前</th>'+
-              '<td>生麦小学校</td>'+
-            '</tr>'+
-            '<tr>'+
-              '<th scope="row">住所</th>'+
-              '<td>生麦四丁目15番1号</td>'+
-            '</tr>'+
-            '<tr>'+
-              '<th scope="row">備考</th>'+
-              '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
-            '</tr>'+
-          '</table>'+
-          '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>'
+              '<tr>'+
+                '<th scope="row">混雑度</th>'+
+                '<td>0%</td>'+
+              '</tr>'+
+              '<tr>'+
+                '<th scope="row">名前</th>'+
+                '<td>生麦小学校</td>'+
+              '</tr>'+
+              '<tr>'+
+                '<th scope="row">住所</th>'+
+                '<td>生麦四丁目15番1号</td>'+
+              '</tr>'+
+              '<tr>'+
+                '<th scope="row">備考</th>'+
+                '<td>'+'被災した住民の避難生活の場所、情報受伝達、備蓄機能を備えた拠点です。'+'</td>'+
+              '</tr>'+
+            '</table>'+
+            '<a href="shelter.html" class="btn btn-primary">避難所の詳細</a>',
+            icon: 'data/male-2.png'
           }
         ];
 
@@ -169,14 +175,12 @@ $('#change').on('click',function(){
 
         // <Generate marker>
         for(var i=0; i<markerData.length; i++){
-
-          let latlng = new google.maps.LatLng({
-            lat: markerData[i]['lat'],
-            lng: markerData[i]['lng']
-          });
   
-          var marker = new google.maps.Marker({
-            position: latlng,
+          let marker = new google.maps.Marker({
+            position: {
+              lat: markerData[i]['lat'],
+              lng: markerData[i]['lng']  
+            },
             map: map
           });
 
@@ -194,7 +198,7 @@ $('#change').on('click',function(){
         var marker = new google.maps.Marker({
           position: {
             lat: markerData[1]['lat'],
-            lng: markerData[1]['lng']
+            lng: markerData[1]['lng'],
           },
           map: map
         });
@@ -204,10 +208,21 @@ $('#change').on('click',function(){
         });  
 
         // Generate marker on click
+        google.maps.event.addListener(map, 'click', event => clickListener(event, map));
 
-        // Route guidance        
+        // Route guidance    
         
       };
+
+      function clickListener(event, map) {
+        const lat = event.latLng.lat();
+        const lng = event.latLng.lng();
+        const marker = new google.maps.Marker({
+          position: {lat, lng},
+          map: map
+        });
+      };
+
     // </Generate map>
   // </home.html>
 // </user>
